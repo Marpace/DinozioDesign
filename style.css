@@ -203,6 +203,8 @@ nav {
 
 .title h1{
     display: inline;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
 }
 
 .title-active {
@@ -272,7 +274,9 @@ nav {
 
 #accordion h1 {
     color: white;
-    margin: 30px;
+    margin: 10px 0 30px 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
 }
 
 #templating h2 {
@@ -397,6 +401,13 @@ nav {
         height: 430px;
     }
 
+    #titles {
+        width: 400px;
+    }
+
+    .title h1{
+        font-size: 80px;
+    }
 
     #cards-wrap {
         position: relative;
@@ -420,6 +431,10 @@ nav {
         font-size: 16px;
     }
 
+    #accordion h1 {
+        font-size: 80px;
+    }
+
     #templating-wrap-div {
         display: flex;
     }
@@ -434,6 +449,26 @@ nav {
 /* --------------------  DESKTOP - BOOTSTRAP LG ------------------------ */
 
 @media screen and (min-width: 992px) {
+
+
+
+    #hero {
+        height: 550px;
+    }
+
+    #hero h1 {
+        font-size: 150px;
+        line-height: 1;
+    }
+    
+    #hero h3 {
+        font-size: 40px;
+    }
+
+    #hero-img img {
+        width: 620px;
+        height: 580px;
+    }
 
     #card-1 {
         font-size: 21px;
