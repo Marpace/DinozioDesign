@@ -137,9 +137,13 @@ nav {
 
 /* ---------------------  HERO  ---------------------- */
 #hero {
+    display: flex;
     height: 400px;
     background-image: url(images/hero-background.jpg);
     background-size: cover;
+}
+
+#hero-left {
     padding: 40px;
 }
 
@@ -162,17 +166,24 @@ nav {
     color: white;
     font-size: 20px;
 }
+
+#hero-img {
+    display: none;
+}
 /* ---------------------  ABOUT  ---------------------- */
 
 #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     padding: 30px;
-    height: 600px;
+    height: fit-content;
     background: linear-gradient(#FE7F24, rgb(247, 166, 75), #FE7F24);
 }
 
 #titles {
-    width: 90%;
+    width: 300px;
     height: 70px;
     margin-left: auto;
     margin-right: auto;
@@ -208,16 +219,22 @@ nav {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
-    height: 100%;
+    height: 380px;
     width: 100%;
     border-radius: 0;
     padding: 10px;
     opacity: 0;
-    transition: .2s;
-    border: 1px solid rgb(104, 42, 0);
+    transition: .4s ease-out;
     background: rgb(255, 255, 255);
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#card-1 {
+    font-size: 18px;
 }
 
 .front {
@@ -246,7 +263,7 @@ nav {
 /* ---------------------  ACCORDION  ---------------------- */
 
 #accordion {
-    height: 500px;
+    height: fit-content;
     background: rgb(53, 53, 53);
     text-align: center;
     padding: 40px;
@@ -268,7 +285,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
-    margin: 30px auto 0 ;
+    margin: 30px auto 10px ;
 }
 
 .accordion-icon {
@@ -289,9 +306,136 @@ nav {
 
 .plus-1 {
     transform: rotate(90deg);
+    transition: .2s;
 }
 
 #accordion hr {
     border: 1px solid white;
     opacity: 1;
+}
+
+.acc-content {
+    height: 0;
+    overflow: hidden;
+    transition: .4s ease;
+    border-top: 1px solid white;
+    
+}
+
+.content-active{
+    height: 250px;
+    border-bottom: 1px solid white;
+}
+
+.acc-content p {
+    color: white;
+    margin: 10px ;
+}
+
+/* ----------------------  MEDIA QUERIES  -------------------------- */
+
+
+
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+
+    nav {
+        flex-direction: row;
+    }
+
+    #navbar-toggler {
+        display: none;
+    }
+
+    #small-nav {
+        padding: 0 30px;
+        width: 100%;
+        height: 100px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #small-nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    #small-nav ul li a {
+        font-size: 20px;
+    }
+
+    #icons-wrap {
+        height: fit-content;
+        flex-direction: row;
+
+    }
+    
+    .icon {
+        margin: 10px;
+        height: 45px;
+        width: 45px;
+    }
+
+
+
+    #hero-img{
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #hero-img img {
+        width: 470px;
+        height: 430px;
+    }
+
+
+    #cards-wrap {
+        position: relative;
+        height: 250px;
+        width: 70%;
+        margin:  30px auto;
+    }
+
+    .card {
+        height: 250px;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px;
+        opacity: 0;
+        transition: .2s;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    #card-2 {
+        font-size: 16px;
+    }
+
+    #templating-wrap-div {
+        display: flex;
+    }
+
+    #templating-img-div {
+        width: 300%;
+     background-image: url(images/countertop.jpg);
+     background-size: cover;
+    }
+}
+
+/* --------------------  DESKTOP - BOOTSTRAP LG ------------------------ */
+
+@media screen and (min-width: 992px) {
+
+    #card-1 {
+        font-size: 21px;
+    }
+
+    #card-2 {
+        font-size: 19px;
+    }
 }

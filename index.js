@@ -1,87 +1,5 @@
-const card1 = $('#card-1')
-const card2 = $('#card-2')
-const title1 = $('#title-1')
-const title2 = $('#title-2')
 
-const titles = [title1, title2]
-const cards = [card1, card2];
-
-const switchCard = function(){
-  cards.forEach(card => {
-
-    if(card.hasClass('front')){
-        card.animate({
-            top: "40px",
-            opacity: 0
-        }, 200, function(){
-            card.css('top', '');
-            card.addClass('back');
-        });
-        card.delay(300).animate({
-            opacity: 1
-        });
-
-        setTimeout(function(){
-            card.addClass('back');
-            card.removeClass('front');
-        }, 300);
-    } else if (card.hasClass('back')){
-        setTimeout(function(){
-            card.addClass('front');
-            card.removeClass('back');
-        }, 200);
-    }
-  });
-};
-
-const selector1 = $('#selector-1')
-const selector2 = $('#selector-2')
-
-const selectors = [selector1, selector2];
-
-let animating = false;
-
-selector1.click(function(){
-    if(!animating){
-        animating = true;
-        if(!selector1.hasClass('active')) {
-            switchCard();
-            selector1.addClass('active');
-            selector2.removeClass('active');
-            card1.html('full service survey company with over a decade experience in design and CAD. We measure any and all standing structures and produce accurate drawings of existing conditions. Our customers use our services to template their work, and to get a baseline of the existing structure in order to do their design and construction work with ease of mind and certainty.');
-            setTimeout(() => {
-                card2.html('');
-            }, 200);
-            title2.removeClass('title-active')
-            title1.addClass('title-active')
-        }
-    }
-    setTimeout(() => {
-        animating = false;
-    }, 300);
-});
-console.log(title1)
-selector2.click(function(){
-    if(!animating){
-        animating = true;
-        if(!selector2.hasClass('active')) {
-            switchCard();
-            selector2.addClass('active');
-            selector1.removeClass('active');
-            card2.html('Our professionals measures the exterior and/or interior of the home, building or structure to create a three-dimensional representation of it. The process involves using lasers to capture dimensions. This method is much more accurate than blueprints and plans. As such, we delivery to you the most accurate as-built floor plans, elevation drawings, reflected ceiling plans, and any other intricate structure that you need for your sophisticated project.');
-            title1.css.left = "30px"
-            setTimeout(() => {
-                card1.html('');
-            }, 200);
-            title1.removeClass('title-active')
-            title2.addClass('title-active')
-        }
-    }
-    setTimeout(() => {
-        animating = false;
-    }, 300);
-    
-});
+// *********************************  NAVBAR SECTION  *******************************
 
 
 const toggler = document.querySelector('#navbar-toggler');
@@ -127,6 +45,97 @@ toggler.addEventListener('click', function(){
     }
 })
 
+
+
+
+// *********************************  ABOUT SECTION  *******************************
+
+
+const card1 = $('#card-1')
+const card2 = $('#card-2')
+const title1 = $('#title-1')
+const title2 = $('#title-2')
+
+const titles = [title1, title2]
+const cards = [card1, card2];
+
+const switchCard = function(){
+  cards.forEach(card => {
+
+    if(card.hasClass('front')){
+        card.animate({
+            top: "40px",
+            opacity: 0
+        }, 400, function(){
+            card.css('top', '');
+            card.addClass('back');
+        });
+        card.delay(400).animate({
+            opacity: 1
+        });
+
+        setTimeout(function(){
+            card.addClass('back');
+            card.removeClass('front');
+        }, 300);
+    } else if (card.hasClass('back')){
+        setTimeout(function(){
+            card.addClass('front');
+            card.removeClass('back');
+        }, 200);
+    }
+  });
+};
+
+const selector1 = $('#selector-1')
+const selector2 = $('#selector-2')
+
+const selectors = [selector1, selector2];
+
+let animating = false;
+
+selector1.click(function(){
+    if(!animating){
+        animating = true;
+        if(!selector1.hasClass('active')) {
+            switchCard();
+            selector1.addClass('active');
+            selector2.removeClass('active');
+            card1.html('A full service survey company with over a decade experience in design and CAD. We measure any and all standing structures and produce accurate drawings of existing conditions. Our customers use our services to template their work, and to get a baseline of the existing structure in order to do their design and construction work with ease of mind and certainty.');
+            setTimeout(() => {
+                card2.html('');
+            }, 200);
+            title2.removeClass('title-active')
+            title1.addClass('title-active')
+        }
+    }
+    setTimeout(() => {
+        animating = false;
+    }, 300);
+});
+console.log(title1)
+selector2.click(function(){
+    if(!animating){
+        animating = true;
+        if(!selector2.hasClass('active')) {
+            switchCard();
+            selector2.addClass('active');
+            selector1.removeClass('active');
+            card2.html('Our professionals measures the exterior and/or interior of the home, building or structure to create a three-dimensional representation of it. The process involves using lasers to capture dimensions. This method is much more accurate than blueprints and plans. As such, we delivery to you the most accurate as-built floor plans, elevation drawings, reflected ceiling plans, and any other intricate structure that you need for your sophisticated project.');
+            title1.css.left = "30px"
+            setTimeout(() => {
+                card1.html('');
+            }, 200);
+            title1.removeClass('title-active')
+            title2.addClass('title-active')
+        }
+    }
+    setTimeout(() => {
+        animating = false;
+    }, 300);
+    
+});
+
 const firstCard = document.querySelector('#card-1')
 const secondCard = document.querySelector('#card-2')
 
@@ -147,8 +156,61 @@ const cardsCallback = (entries, observer) => {
     });
 };
 
+
+
 const cardsTarget = document.querySelector('#cards-wrap');
 
 const observer = new IntersectionObserver(cardsCallback, cardsOptions);
 
 observer.observe(cardsTarget);
+
+
+
+
+
+
+
+// *********************************  ACCORDION SECTION  *******************************
+
+
+const plusIcons = document.getElementsByClassName('accordion-icon');
+const icons = [...plusIcons];
+
+const content = document.getElementsByClassName('acc-content');
+const contentDivs = [...content];
+
+
+icons.forEach(icon =>{
+    icon.addEventListener('click', function(){
+        if(getComputedStyle(icon.children[0]).transform === "matrix(6.12323e-17, 1, -1, 6.12323e-17, 0, 0)"){ 
+            contentDivs.forEach(div => {
+                if(div.classList.contains('content-active')){
+                    div.classList.remove('content-active');
+                }
+                console.log(div)
+            });
+            icons.forEach(icon => {
+                icon.children[0].style.transform = "rotate(90deg)"
+            });
+            
+            icon.children[0].style.transform = "rotate(0deg)";
+            icon.parentElement.nextElementSibling.classList.add('content-active')
+
+        } else {
+            icon.children[0].style.transform = "rotate(90deg)";
+            icon.parentElement.nextElementSibling.classList.remove('content-active')
+            setTimeout(() => {
+                icon.parentElement.nextElementSibling.style.borderBottom = "none"
+            }, 400);
+        }
+    });
+})
+
+// SCREEN SIZE 768px OR HIGHER
+
+if(window.screen.width >= 768){
+    contentDivs[0].classList.add('content-active')
+    icons[0].children[0].style.transform = "rotate(0deg)";
+}
+
+console.log()
