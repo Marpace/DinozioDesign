@@ -66,11 +66,11 @@ const switchCard = function(){
         card.animate({
             top: "40px",
             opacity: 0
-        }, 400, function(){
+        }, 300, function(){
             card.css('top', '');
             card.addClass('back');
         });
-        card.delay(400).animate({
+        card.delay(300).animate({
             opacity: 1
         });
 
@@ -106,7 +106,9 @@ selector1.click(function(){
                 card2.html('');
             }, 200);
             title2.removeClass('title-active')
-            title1.addClass('title-active')
+            setTimeout(() => {
+                title1.addClass('title-active')
+            }, 200);
         }
     }
     setTimeout(() => {
@@ -127,7 +129,9 @@ selector2.click(function(){
                 card1.html('');
             }, 200);
             title1.removeClass('title-active')
-            title2.addClass('title-active')
+            setTimeout(() => {
+                title2.addClass('title-active')
+            }, 200);
         }
     }
     setTimeout(() => {
@@ -184,23 +188,33 @@ icons.forEach(icon =>{
     icon.addEventListener('click', function(){
         if(getComputedStyle(icon.children[0]).transform === "matrix(6.12323e-17, 1, -1, 6.12323e-17, 0, 0)"){ 
             contentDivs.forEach(div => {
-                if(div.classList.contains('content-active')){
+                if(div.classList.contains('content-active') || div.classList.contains('content-active-desktop')){
                     div.classList.remove('content-active');
+                    div.classList.remove('content-active-desktop');
                 }
-                console.log(div)
             });
             icons.forEach(icon => {
                 icon.children[0].style.transform = "rotate(90deg)"
             });
             
             icon.children[0].style.transform = "rotate(0deg)";
-            icon.parentElement.nextElementSibling.classList.add('content-active')
+            icon.parentElement.nextElementSibling.style.height = ''
+            if(window.screen.width >= 768){
+                icon.parentElement.nextElementSibling.classList.add('content-active-desktop')
+            } else {
+                icon.parentElement.nextElementSibling.classList.add('content-active')
+            }
+            
 
         } else {
             icon.children[0].style.transform = "rotate(90deg)";
-            icon.parentElement.nextElementSibling.classList.remove('content-active')
+            if(window.screen.width >= 768){
+                icon.parentElement.nextElementSibling.classList.remove('content-active-desktop')
+            } else {
+                icon.parentElement.nextElementSibling.classList.remove('content-active')
+            }
             setTimeout(() => {
-                icon.parentElement.nextElementSibling.style.borderBottom = "none"
+                icon.parentElement.nextElementSibling.style.borderBottom = ""
             }, 400);
         }
     });
@@ -209,7 +223,7 @@ icons.forEach(icon =>{
 // SCREEN SIZE 768px OR HIGHER
 
 if(window.screen.width >= 768){
-    contentDivs[0].classList.add('content-active')
+    contentDivs[0].classList.add('content-active-desktop')
     icons[0].children[0].style.transform = "rotate(0deg)";
 }
 
