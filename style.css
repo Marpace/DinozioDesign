@@ -39,34 +39,17 @@ h1 {
 
 
 /* ---------------------- NAVBAR  ------------------------ */
-/* 
-#navigation {
-    background: #FE7F24;
+
+#nav-filler {
+    height: 80px;
 }
-
-.navbar {
-    padding: 0;
-    height: 70px;
-}
-
-.navbar img {
-    margin: 0;
-    padding: 0;
-}
-
-.container-fluid {
-    background: #FE7F24;
-    height: 100%;
-}
-
-.navbar-toggler {
-    border: none;
-
-} */
 
 nav {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
 }
 
 #nav-wrap {
@@ -343,10 +326,29 @@ nav {
     margin: 10px ;
 }
 
+
+
+
+
+
+
+/* ***************************  SERVICES PAGE ************************** */
+
+#wrap {
+    width: 100%;
+    height: 1000px;
+    background: #FE7F24;
+    padding: 100px 20PX;
+    text-align: center;
+}
+
+#wrap h1 {
+    font-size: 50px;
+}
+
+
+
 /* ----------------------  MEDIA QUERIES  -------------------------- */
-
-
-
 
 /* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
 @media screen and (min-width: 768px) {
