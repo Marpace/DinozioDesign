@@ -32,6 +32,10 @@ h1 {
     cursor: pointer;
 }
 
+.icon a {
+    text-align: center;
+}
+
 .icon img {
     width: 90%;
     height: 90%;
@@ -390,11 +394,24 @@ nav {
         margin: 10px;
     }
 
+    #hero {
+        overflow: hidden;
+    }
 
+    #hero-left {
+        padding-right: 0;
+    }
+
+    #hero-left button {
+        margin-top: 20px;
+    }
+
+    #hero h1 {
+        font-size: 90px;
+    }
 
     #hero-img{
         display: flex;
-        overflow: hidden;
         width: 100%;
         justify-content: center;
     }
@@ -402,6 +419,7 @@ nav {
     #hero-img img {
         width: 470px;
         height: 430px;
+        z-index: 3000;
     }
 
     #titles {
@@ -462,10 +480,11 @@ nav {
 
     #hero {
         height: 550px;
+        padding-left: 60px;
     }
 
     #hero h1 {
-        font-size: 150px;
+        font-size: 120px;
         line-height: 1;
     }
     
@@ -474,8 +493,8 @@ nav {
     }
 
     #hero-img img {
-        width: 620px;
-        height: 580px;
+        width: 600px;
+        height: 560px;
     }
 
     #card-1 {
