@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 
+    <!-- Font Awesome Icons  -->
+    <script src="https://kit.fontawesome.com/da7d263600.js" crossorigin="anonymous"></script>
+
     <title>Dinozio Design</title>
   </head>
   <body>
@@ -34,7 +37,7 @@
         </div>
         <div id="small-nav">
             
-            <div id="icons-wrap">
+            <!-- <div id="icons-wrap">
                 <div class="icon">
                     <img src="images/facebook logo white (1).png" alt="facebook">
                 </div>
@@ -44,17 +47,17 @@
                 <div class="icon">
                     <img src="images/twitter logo white.png" alt="twitter">
                 </div>
-            </div>
+            </div> -->
             <div>
                 <ul>
-                    <li>
-                        <a href="">Home</a>
+                    <li class="nav-link-active">
+                        <a href="index.html">Home</a>
                     </li>
                     <li>
                         <a href="services.html">Services</a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -68,7 +71,7 @@
         <div id="hero-left">
             <h1>DINOZIO <br>DESIGN</h1>
             <h3>DIGITAL SURVEY</h3>
-            <button>In a nutshell</button>
+            <button>Learn more</button>
         </div>
         <div id="hero-img">
             <img src="images/logo-white.png" alt="">
@@ -78,26 +81,54 @@
     <!-- -----------------------------  ABOUT  ------------------------------- -->
 
     <section id="about"> 
-        <div id="titles">
+
+        <div id="card-new">
+            <div id="who">
+                <h2>Who we are</h2>
+                <p>A full service survey company with over a decade experience in design and CAD. We measure any and all standing structures and produce accurate drawings of existing conditions. Our customers use our services to template their work, and to get a baseline of the existing structure in order to do their design and construction work with ease of mind and certainty.</p>
+            </div>
+            <div id="what">
+                <h2>What we do</h2>
+                <p>Our professionals measure the exterior and/or interior of the home, building or structure to create a three-dimensional representation of it. The process involves using lasers to capture dimensions. This method is much more accurate than blueprints and plans. As such, we delivery to you the most accurate as-built floor plans, elevation drawings, reflected ceiling plans, and any other intricate structure that you need for your sophisticated project.</p>
+            </div>
+                <div id="controls">
+                <div class="controls-img" id="arrow-left"><i class="fas fa-arrow-left" style="color: grey;"></i></div>
+                <div id="indicator">
+                    <div id="inner-indicator"></div>
+                </div>
+                <div class="controls-img" id="arrow-right"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div id="number">
+                1/2
+            </div>
+        </div>
+
+
+
+
+
+        <!-- <div id="titles">
            <div id="title-1" class="title title-active">
                <h1 style="color: white;">WHO </h1><h1>WE ARE</h1>
            </div> 
            <div id="title-2" class="title" >
                <h1 style="color: white;">WHAT </h1><h1>WE DO</h1>
            </div>
-        </div>
-
+        </div> -->
+<!-- 
        <div id="cards-wrap">
            <div class="card front" id="card-1">
-               A full service survey company with over a decade experience in design and CAD. We measure any and all standing structures and produce accurate drawings of existing conditions. Our customers use our services to template their work, and to get a baseline of the existing structure in order to do their design and construction work with ease of mind and certainty.
-           </div>
+               <p>
+                   A full service survey company with over a decade experience in design and CAD. We measure any and all standing structures and produce accurate drawings of existing conditions. Our customers use our services to template their work, and to get a baseline of the existing structure in order to do their design and construction work with ease of mind and certainty.
+                </p>
+            </div>
            <div class="card back" id="card-2"></div>
        </div>
 
        <div id="selectors">
            <div id="selector-1" class="active"></div>
            <div id="selector-2"></div>
-       </div>
+       </div> -->
     </section>
 
     <!-- -------------------------------  ACCORDION  ------------------------------- -->
@@ -152,6 +183,103 @@
             </div>
 
         </div>
+    </section>
+
+<!-- -------------------------------  BENEFITS  ------------------------------- -->
+
+    <section id="benefits">
+        <div id="benefits-title">
+            <h1>Who benefits from our services</h1>
+        </div>
+        <div class="benefits-group">
+            <div class="group-img img-left"></div>
+            <div class="group-text text-left">
+                <h3>Fabricators & Manufacturers</h3>
+                <p>We support a variety of manufacturing and fabrication activities to tailor to the custom nature of the job and the level of precision that you need to template for your high tech machines and CNC.</p>
+            </div>
+        </div>
+        <div class="benefits-group group-reverse">
+            <div class="group-img img-right"></div>
+            <div class="group-text text-right">
+                <h3>Interior Designers</h3>
+                <p>We provide real size 3D wire-frame and 2D floor plans in any CAD format to give you the clarity, certainty and ease of mind that you deserve when you start your new project.</p>
+            </div>
+        </div>
+        <div class="benefits-group">
+            <div class="group-img img-left"></div>
+            <div class="group-text text-left">
+                <h3>Estate Owners & Realtors</h3>
+                <p>From verifying square footage to creating inventory of your MEP and fixtures, we are with you every step of the way to save you money and time, and to help you resolve any landlord disputes.</p>
+            </div>
+        </div>
+        <div class="benefits-group group-reverse">
+            <div class="group-img img-right"></div>
+            <div class="group-text text-right">
+                <h3>Builders & Contractors</h3>
+                <p>We provide real size 3D wire-frame and 2D floor plans in any CAD format to give you the clarity, certainty and ease of mind that you deserve when you start your new project.</p>
+            </div>
+        </div>
+        <div class="benefits-group">
+            <div class="group-img img-left"></div>
+            <div class="group-text text-left">
+                <h3>Architects</h3>
+                <p>Everyone knows that what is build always deviates from the original plan, and that is where we come in to verify the build for you according to your original plan.</p>
+            </div>
+        </div>
+        <div class="benefits-group group-reverse">
+            <div class="group-img img-right"></div>
+            <div class="group-text text-right">
+                <h3>Specialty Projects</h3>
+                <p>Our method and results cover a wide range of specialties, be it MEP engineering, sound and audio acoustique plan, security camera locations, reflective ceiling, specialty custom designs, ... and more  </p>
+            </div>
+        </div>
+    </section>
+
+<!-- -------------------------------  FOOTER  ------------------------------- -->
+
+
+    <section id="footer">
+        <div id="footer-wrap">
+            <div id="footer-logo">
+                <div id="footer-img">
+                    <img src="images/footer-logo.png" alt="Dinozio Design Logo">
+                </div>
+                <h2>Dinozio Design</h2>
+            </div>
+            <div id="footer-contact">
+                <h2>Contact us</h2>
+                <div id="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:416-123-4567">(416)-123-4567</a>
+                </div>
+                <div id="email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:email@email.com">email@email.com</a>
+                </div>
+                <div id="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://www.google.com/maps/place/Dinozio.Design/@43.7752873,-79.336311,14.65z/data=!4m5!3m4!1s0x0:0x43455a05f79862d0!8m2!3d43.7741692!4d-79.3306901">Address Toronto ON</a>
+                </div>
+            </div>
+            <div id="footer-social">
+                <button>Back to top</button>
+                <div id="footer-icons">
+                    <div class="icon">
+                        <img src="images/facebook logo white (1).png" alt="facebook">
+                    </div>
+                    <div class="icon">
+                        <img src="images/Instagram logo white.png" alt="instagram">
+                    </div>
+                    <div class="icon">
+                        <img src="images/twitter logo white.png" alt="twitter">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            <p></p>
+        </div>
+
     </section>
 
     <!-- jquery cdn -->

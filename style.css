@@ -5,40 +5,7 @@ body {
 h1 {
     font-weight: 800;
     font-size: 40px;
-}
-
-
-
-/* ---------------------- SOCIAL MEDIA ICONS  ------------------------ */
-
-#icons-wrap {
-    height: 190px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 1001;
-}
-
-.icon {
-    display: flex;
-    height: 50px;
-    width: 50px;
-    border-radius:10px;
-    border: 1px solid white;
-    background:rgb(34, 34, 34);
-    padding: 3px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.icon a {
-    text-align: center;
-}
-
-.icon img {
-    width: 90%;
-    height: 90%;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 
@@ -61,7 +28,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #FE7F24;
+    background: #FF9050;
 }
 
 #logo {
@@ -103,15 +70,20 @@ nav {
     padding: 0 30px;
     height: 0;
     overflow: hidden;
-    background: #FE7F24;
+    background: #FF9050;
     transition: .4s;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+#small-nav div {
+    transition: .2s;
 }
 
 #small-nav ul {
     list-style: none;
+    margin: auto;
 }
 
 #small-nav ul li a{
@@ -119,6 +91,70 @@ nav {
     color: black;
     font-size: 30px;
     line-height: 2;
+    font-weight: 700;
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+    }
+
+    #navbar-toggler {
+        display: none;
+    }
+
+    #logo {
+        margin-left: 100px;
+    }
+
+    #small-nav {
+        padding: 0 30px;
+        width: 100%;
+        height: 100px;
+        position: relative;
+        display: block;
+        /* flex-direction: row;
+        align-items: center;
+        justify-content: flex-end; */
+    }
+
+    #small-nav div {
+        position: absolute;
+        top: 30px;
+        right: 100px;
+        transition: .3s;
+        width: 368px;
+    }
+
+    #small-nav ul {
+        margin: auto;
+        padding: 0;
+    }
+
+    #small-nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 0 15px;
+        height: 35px;
+    }
+
+    #small-nav ul li a {
+        font-size: 17px;
+    }
+
+    .nav-link-active {
+        border-bottom: 2px solid black;
+    }
+
+}
+
+/* --------------------  DESKTOP - BOOTSTRAP LG ------------------------ */
+
+@media screen and (min-width: 992px) {
+
+
 }
 
 
@@ -147,30 +183,88 @@ nav {
 
 #hero button {
     margin-top: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px 20px;
-    background:rgb(34, 34, 34);
+    background:rgb(255, 255, 255);
     border: 2px solid white;
-    color: white;
+    color: rgb(49, 49, 49);
     font-size: 20px;
 }
 
 #hero-img {
     display: none;
 }
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+    #hero {
+        overflow: hidden;
+    }
+
+    #hero-left {
+        padding-right: 0;
+    }
+
+    #hero-left button {
+        margin-top: 20px;
+    }
+
+    #hero h1 {
+        font-size: 90px;
+    }
+
+    #hero-img{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #hero-img img {
+        width: 470px;
+        height: 430px;
+        z-index: 1900;
+    }
+}
+
+/* --------------------  DESKTOP - BOOTSTRAP LG ------------------------ */
+
+@media screen and (min-width: 992px) { 
+    #hero {
+        height: 550px;
+        padding-left: 60px;
+    }
+
+    #hero h1 {
+        font-size: 120px;
+        line-height: 1;
+    }
+    
+    #hero h3 {
+        font-size: 40px;
+    }
+
+    #hero-img img {
+        width: 600px;
+        height: 560px;
+    }
+}
+
+
 /* ---------------------  ABOUT  ---------------------- */
 
 #about {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 30px;
+    padding: 40px 5px;
     height: fit-content;
-    background: linear-gradient(#FE7F24, rgb(247, 166, 75), #FE7F24);
+    background: linear-gradient(#FF9050, rgb(235, 176, 109), #FF9050);
 }
 
-#titles {
+/* #titles {
     width: 300px;
     height: 70px;
     margin: 30px auto;
@@ -204,6 +298,8 @@ nav {
     width: 300px;
     margin:  30px auto;
 }
+
+
 
 .card {
     display: flex;
@@ -246,6 +342,133 @@ nav {
 
 #selectors .active {
     background: black;
+} */
+
+#card-new {
+    background: black;
+    padding: 30px;
+    text-align: left;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+    
+}
+
+#who {
+    transition: .4s;
+    position: absolute;
+    width: 90%;
+    align-self: center;
+}
+
+#what {
+    opacity: 0;
+    transition: .4s;
+}
+
+#card-new h2,
+#card-new p {
+    color: white;
+}
+
+#card-new p {
+    line-height: 2;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls-img {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.controls-img i {
+    color: #FE7F24;
+    font-size: 20px;
+}
+
+#indicator {
+    width: 70%;
+    height: 3px;
+    background: grey;
+    position: relative;
+}
+
+#inner-indicator {
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    right: 50%;
+    background: #FE7F24;
+    transition: .2s;
+}
+
+.indicator-right {
+    right: 0;
+}
+
+#number {
+    color: white;
+    align-self: center;
+    font-size: 15px;
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+    #titles {
+        width: 350px;
+    }
+
+    .title h1{
+        font-size: 80px;
+    }
+
+    #cards-wrap {
+        position: relative;
+        height: 250px;
+        width: 70%;
+        margin:  30px auto;
+    }
+
+    .card {
+        height: 250px;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px;
+        opacity: 0;
+        transition: .2s;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    #card-2 {
+        font-size: 16px;
+    }
+}
+
+/* --------------------  DESKTOP - BOOTSTRAP LG ------------------------ */
+
+@media screen and (min-width: 992px) {
+    #card-1 {
+        font-size: 21px;
+    }
+
+    #card-2 {
+        font-size: 19px;
+    }
 }
 
 /* ---------------------  ACCORDION  ---------------------- */
@@ -261,7 +484,6 @@ nav {
     color: white;
     margin: 10px 0 30px 0;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
 }
 
 #templating h2 {
@@ -331,129 +553,10 @@ nav {
 }
 
 
-
-
-
-
-
-/* ***************************  SERVICES PAGE ************************** */
-
-#wrap {
-    width: 100%;
-    height: 1000px;
-    background: #FE7F24;
-    padding: 100px 20PX;
-    text-align: center;
-}
-
-#wrap h1 {
-    font-size: 50px;
-}
-
-
-
-/* ----------------------  MEDIA QUERIES  -------------------------- */
-
 /* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
 @media screen and (min-width: 768px) {
-
-
-    nav {
-        flex-direction: row;
-    }
-
-    #navbar-toggler {
-        display: none;
-    }
-
-    #small-nav {
-        padding: 0 30px;
-        width: 100%;
-        height: 100px;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-    }
-
-    #small-nav ul li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    #small-nav ul li a {
-        font-size: 20px;
-    }
-
-    #icons-wrap {
-        height: fit-content;
-        flex-direction: row;
-
-    }
-    
-    .icon {
-        margin: 10px;
-    }
-
-    #hero {
-        overflow: hidden;
-    }
-
-    #hero-left {
-        padding-right: 0;
-    }
-
-    #hero-left button {
-        margin-top: 20px;
-    }
-
-    #hero h1 {
-        font-size: 90px;
-    }
-
-    #hero-img{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-
-    #hero-img img {
-        width: 470px;
-        height: 430px;
-        z-index: 3000;
-    }
-
-    #titles {
-        width: 350px;
-    }
-
-    .title h1{
-        font-size: 80px;
-    }
-
-    #cards-wrap {
-        position: relative;
-        height: 250px;
-        width: 70%;
-        margin:  30px auto;
-    }
-
-    .card {
-        height: 250px;
-        width: 100%;
-        border-radius: 0;
-        padding: 10px;
-        opacity: 0;
-        transition: .2s;
-        background: rgb(255, 255, 255);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    
-    #card-2 {
-        font-size: 16px;
-    }
-
     #accordion h1 {
-        font-size: 80px;
+        font-size: 70px;
     }
 
     #templating-wrap-div {
@@ -467,41 +570,291 @@ nav {
     #templating-img-div {
         width: 300%;
         height: 550px;
-        background-image: url(images/countertop.jpg);
+        background-image: url(images/templating-what.jpg);
         background-size: cover;
+        transition: .7s;
+    }
+}
+
+
+
+/* ---------------------- SOCIAL MEDIA ICONS  ------------------------ */
+
+/* #icons-wrap {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001;
+}
+
+.icon {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius:10px;
+    border: 1px solid white;
+    background:rgb(34, 34, 34);
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon a {
+    text-align: center;
+}
+
+.icon img {
+    width: 90%;
+    height: 90%;
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+/* @media screen and (min-width: 768px) {
+    #icons-wrap {
+        height: fit-content;
+        flex-direction: row;
+
+    }
+    
+    .icon {
+        margin: 10px;
+    }    
+}  */
+
+
+/* ------------------------------  BENEFITS  ------------------------------- */
+
+#benefits {
+    padding: 60px 20px;
+}
+
+#benefits-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.group-img {
+    height: 200px;
+    max-width: 500px;
+    background: grey;
+    margin: 30px auto;
+}
+
+.group-text {
+    text-align: center;
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+    
+    #benefits-title h1 {
+        font-size: 70px;
+    }
+
+    .benefits-group {
+        display: flex;
+        margin: 50px 0;
+        padding: 50px;
+    }    
+
+    .group-img {
+        height: 300px;
+        width: 300%;
+        margin: 0 30px;
+    }
+
+    .img-left {
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .img-right {
+        transform: translateX(100px);
+        opacity: 0;
+        transition: .5s;
+    }
+    .text-left {
+        text-align: left;
+        margin: 0 10px 0 20px; 
+        transform: translateX(100px);
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .text-right{
+        text-align: right;
+        margin: 0 20px 0 10px;
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .group-reverse {
+        flex-direction: row-reverse;
     }
 }
 
 /* --------------------  DESKTOP - BOOTSTRAP LG ------------------------ */
 
 @media screen and (min-width: 992px) {
+    #benefits {
+        padding: 60px 100px;
+    }
+}
 
 
+/* ***************************  FOOTER ************************** */
 
-    #hero {
-        height: 550px;
-        padding-left: 60px;
+#footer-wrap {
+    display: flex;
+ 
+    flex-wrap: wrap;
+    background: #2e2e2e;
+    padding: 30px 40px;
+    justify-content: center;
+}
+
+#footer-logo {
+    width: 50%;
+    align-self: start;
+    order: 3;
+}
+
+#footer-img {
+    height: 80px;
+    width: 100px;
+}
+
+#footer-logo img {
+    width: 100%;
+}
+
+#footer-logo h2 {
+    color: white;
+    font-family: "Righteous", sans-serif;
+    font-size: 30px;
+}
+
+#footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 50%;
+    order: 3;
+}
+
+#footer-social button {
+    border: 1px solid white;
+    border-radius: 5px;
+    background: #2e2e2e;
+    padding: 10px 20px;
+    color: white;
+}
+
+#footer-icons {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+.icon {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon img {
+    width: 100%;
+}
+
+#footer-contact h2,
+#footer-contact p,
+#footer-contact i {
+    color: white;
+}
+
+#footer-contact {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-contact h2 {
+font-size: 40px;
+margin-bottom: 40px;
+}
+
+#footer-contact a {
+    display: inline;
+    margin: 20px 20px;
+    color: white;
+}
+
+#email {
+    margin: 10px 0;
+}
+
+#copyright {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+   background: black;
+}
+
+#copyright p {
+    margin: 0;
+    color: white;
+}
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+    #footer-wrap {
+        padding: 30px 30px;
+        justify-content: space-around;
     }
 
-    #hero h1 {
-        font-size: 120px;
-        line-height: 1;
-    }
-    
-    #hero h3 {
-        font-size: 40px;
+    #footer-logo {
+        order: 1;
+        width: 30%;
     }
 
-    #hero-img img {
-        width: 600px;
-        height: 560px;
+    #footer-logo h2 {
+        width: 50px;
     }
 
-    #card-1 {
-        font-size: 21px;
+    #footer-contact {
+        width: 30%;
+        order: 2;
     }
 
-    #card-2 {
-        font-size: 19px;
+    #footer-contact h2 {
+        font-size: 30px;
     }
+
+    #footer-social {
+        width: 30%;
+        justify-content: space-between;
+    }
+}
+/* ***************************  SERVICES PAGE ************************** */
+
+#wrap {
+    width: 100%;
+    height: 1000px;
+    background: #FF9050;
+    padding: 100px 20PX;
+    text-align: center;
+}
+
+#wrap h1 {
+    font-size: 50px;
 }
