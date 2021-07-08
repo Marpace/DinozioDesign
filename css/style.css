@@ -13,6 +13,7 @@ h1 {
 
 #nav-filler {
     height: 80px;
+    transition: .3s;
 }
 
 nav {
@@ -34,7 +35,7 @@ nav {
 #logo {
     height: 70px;
     width: 85px;
-    background-image: url(images/logo-black.png);
+    background-image: url(../images/logo-black.png);
     background-size: cover;
 }
 
@@ -163,7 +164,7 @@ nav {
 #hero {
     display: flex;
     height: 400px;
-    background-image: url(images/hero-background.jpg);
+    background-image: url(../images/hero-background.jpg);
     background-size: cover;
 }
 
@@ -395,7 +396,7 @@ nav {
 }
 
 .controls-img i {
-    color: #FE7F24;
+    color: #FF9050;
     font-size: 20px;
 }
 
@@ -411,7 +412,7 @@ nav {
     height: 3px;
     width: 50%;
     right: 50%;
-    background: #FE7F24;
+    background: #FF9050;
     transition: .2s;
 }
 
@@ -490,12 +491,13 @@ nav {
     display: inline-block;
     color: white;
     margin: 0;
+    font-size: 20px;
 }
 
 .templating-title {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     width: 80%;
     margin: 30px auto 10px ;
     align-items: center;
@@ -509,6 +511,7 @@ nav {
     cursor: pointer;
     height: 20px;
     width: 20px;
+    margin-right: 20px;
 
 }
 
@@ -516,7 +519,7 @@ nav {
     position: absolute;
     height: 2px;
     width: 20px;
-    background: white;
+    background: #FF9050;
 }
 
 .plus-1 {
@@ -534,11 +537,13 @@ nav {
     overflow: hidden;
     transition: .4s ease;
     border-top: 1px solid white;
+    display: flex;
+    align-items: center;
     
 }
 
 .content-active{
-    height: 250px;
+    height: 280px;
     border-bottom: 1px solid white;
 }
 
@@ -550,6 +555,7 @@ nav {
 .acc-content p {
     color: white;
     margin: 10px ;
+    line-height: 2;
 }
 
 
@@ -567,10 +573,20 @@ nav {
         padding-right: 30px;
     }
 
+    .templating-title {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    .accordion-icon {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+
     #templating-img-div {
         width: 300%;
         height: 550px;
-        background-image: url(images/templating-what.jpg);
+        background-image: url(../images/templating-WHAT.jpg);
         background-size: cover;
         transition: .7s;
     }
@@ -768,6 +784,7 @@ nav {
     margin: 5px;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
 }
 
 .icon img {
@@ -818,7 +835,7 @@ margin-bottom: 40px;
 @media screen and (min-width: 768px) {
 
     #footer-wrap {
-        padding: 30px 30px;
+        padding: 30px 100px;
         justify-content: space-around;
     }
 
@@ -845,16 +862,5 @@ margin-bottom: 40px;
         justify-content: space-between;
     }
 }
-/* ***************************  SERVICES PAGE ************************** */
 
-#wrap {
-    width: 100%;
-    height: 1000px;
-    background: #FF9050;
-    padding: 100px 20PX;
-    text-align: center;
-}
 
-#wrap h1 {
-    font-size: 50px;
-}

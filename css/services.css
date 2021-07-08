@@ -1,0 +1,591 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+/* ---------------------- NAVBAR  ------------------------ */
+
+#nav-filler {
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+}
+
+#nav-wrap {
+    padding: 5px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+}
+
+#logo {
+    height: 70px;
+    width: 85px;
+    background-image: url(../images/footer-logo.png);
+    background-size: cover;
+}
+
+#navbar-toggler {
+    position: relative;
+    height: 40px;
+    width: 37px;
+    display: inline-block;
+}
+
+
+#navbar-toggler div {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    margin: 5px auto;
+    background: rgb(255, 255, 255);
+    transition: .1s;
+}
+
+#toggler-div-1{
+    top: 5px;
+}
+#toggler-div-2 {
+    top: 15px;
+}
+#toggler-div-3 {
+    top: 25px;
+}
+
+#small-nav {
+    text-align: end;
+    padding: 0 30px;
+    height: 0;
+    overflow: hidden;
+    background: #000000;
+    transition: .4s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#small-nav div {
+    transition: .2s;
+}
+
+#small-nav ul {
+    list-style: none;
+    margin: auto;
+}
+
+#small-nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    line-height: 2;
+    font-weight: 700;
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+    }
+
+    #navbar-toggler {
+        display: none;
+    }
+
+    #logo {
+        margin-left: 100px;
+    }
+
+    #small-nav {
+        padding: 0 30px;
+        width: 100%;
+        height: 100px;
+        position: relative;
+        display: block;
+        /* flex-direction: row;
+        align-items: center;
+        justify-content: flex-end; */
+    }
+
+    #small-nav div {
+        position: absolute;
+        top: 30px;
+        right: 100px;
+        transition: .3s;
+        width: 368px;
+    }
+
+    #small-nav ul {
+        margin: auto;
+        padding: 0;
+    }
+
+    #small-nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 0 15px;
+        height: 35px;
+    }
+
+    #small-nav ul li a {
+        font-size: 17px;
+        color: white;
+    }
+
+    .nav-link-active {
+        border-bottom: 2px solid #FF9050;
+    }
+
+}
+
+/* ******************************  HEADER  ******************************** */
+
+
+#services-header {
+    display: flex;
+    background: #FF9050;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+
+#services-header div {
+    text-align: left;
+}
+
+#services-header button {
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px 25px;
+    background: black;
+    margin-top: 50px;
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+    #services-header {
+        padding: 60px;
+    }
+
+    #services-header h1 {
+        font-size: 55px;
+    }
+}
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 992px) {
+
+    #services-header {
+        padding: 150px;
+    }
+}
+
+/* *********************************  PARAGRAPH  ******************************* */
+
+#paragraph-div {
+    padding: 40px 10%;
+    background: black;
+}
+
+#paragraph-div p {
+    color: white;
+    line-height: 2;
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+    #paragraph-wrap {
+        background: #FF9050;
+        height: 150px;
+        padding: 0 60px;
+    }
+
+    #paragraph-div {
+        z-index: 1000;
+        transform: translateY(20px);
+    }
+
+    
+    #paragraph-div p {
+        font-size: 20px;
+        line-height: 1.5;
+}
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 992px) {
+
+    #paragraph-wrap {
+        padding: 0 150px;
+    }
+}
+
+/* *********************************  SERVICES  ******************************* */
+
+#services-items-desktop {
+    display: none;
+}
+
+#services-items {
+    background: #2D2A27;
+    padding: 50px 30px;
+}
+
+#services-items h1,
+#services-items h2,
+#services-items p {
+    color: white;
+}
+
+#services-items h1 {
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.accordion-title h2 {
+    margin: 0;
+    font-weight: 200;
+}
+
+
+.accordion-title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 20px 0 ;
+    align-items: center;
+}
+
+.accordion-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
+
+}
+
+.accordion-icon div {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background: #FF9050;
+}
+
+.plus-1 {
+    transform: rotate(90deg);
+    transition: .2s;
+}
+
+.acc-content {
+    height: 0;
+    overflow: hidden;
+    transition: .4s ease;
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.content-active{
+    height: 10rem;
+    border-bottom: 1px solid white;
+}
+
+.content-active-desktop {
+    height: 210px;
+    border-bottom: 1px solid white;
+}
+
+.acc-content p {
+    color: white;
+    margin: 10px ;
+    line-height: 1.7;
+}
+
+.content-active{
+    height: 280px;
+    border-bottom: 1px solid white;
+}
+
+.content-active-desktop {
+    height: 210px;
+    border-bottom: 1px solid white;
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+    #services-items{
+        display: none;
+    }
+
+    #services-items-desktop {
+        padding: 250px 60px 100px;
+        display: block;
+        background: #2D2A27;
+    }
+
+    #scroll-title {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    #scroll-title h1 {
+        color: white;
+        font-size: 50px;
+    }
+
+    #scroll-wrap {
+        position: relative;
+    }
+
+    #scrollable-div {
+        height: 500px;
+        overflow-y: scroll;
+        box-sizing: content-box;      
+    }
+
+    #scrollable-div::-webkit-scrollbar {
+        display: none;
+    }
+
+    #scrollable-div {
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+    }
+  
+    .scroll-item {
+        width: 45%;
+        margin: 150px 0;
+    }
+
+    #scrollable-div-img {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 60px;
+        top: 125px;
+        width: 40%;
+        height: 250px;
+        border: 1px solid white;
+    }
+
+    #scrollable-div-img h1 {
+        font-size: 100px;
+        color: white;
+    }
+
+    .scroll-item h2,
+    .scroll-item p {
+        color: white;
+    }
+
+    /* #scroll-img {
+        height: 200px;
+        width: 300px;
+        position: relative;
+    }
+
+    .border-div {
+        position: absolute;
+        transition: .5s;
+    }
+
+    #line-1 {
+        height: 0;
+        width: 0;
+        background: black;
+    }
+    #line-2 {
+        height: 0;
+        width: 0;
+        background: black;
+    }
+    #line-3 {
+        bottom: 0;
+        
+        height: 0;
+        width: 0;
+        background: black;
+    }
+    #line-4 {
+        bottom: 0;
+        right: 0;
+        height: 0;
+        width: 0;
+        background: black;
+    } */
+    
+
+}
+
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 992px) {
+
+    #services-items-desktop {
+        padding: 250px 150px 100px;
+    }
+    
+}
+
+/* ***************************  FOOTER ************************** */
+
+#footer-wrap {
+    display: flex;
+ 
+    flex-wrap: wrap;
+    background: black;
+    padding: 30px 40px;
+    justify-content: center;
+}
+
+#footer-logo {
+    width: 50%;
+    align-self: start;
+    order: 3;
+}
+
+#footer-img {
+    height: 80px;
+    width: 100px;
+}
+
+#footer-logo img {
+    width: 100%;
+}
+
+#footer-logo h2 {
+    color: white;
+    font-family: "Righteous", sans-serif;
+    font-size: 30px;
+}
+
+#footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 50%;
+    order: 3;
+}
+
+#footer-social button {
+    border: 1px solid white;
+    border-radius: 5px;
+    background: black;
+    padding: 10px 20px;
+    color: white;
+}
+
+#footer-icons {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+.icon {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 100%;
+}
+
+#footer-contact h2,
+#footer-contact p,
+#footer-contact i {
+    color: white;
+}
+
+#footer-contact {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-contact h2 {
+font-size: 40px;
+margin-bottom: 40px;
+}
+
+#footer-contact a {
+    display: inline;
+    margin: 20px 20px;
+    color: white;
+}
+
+#email {
+    margin: 10px 0;
+}
+
+#copyright {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+   background: black;
+}
+
+#copyright p {
+    margin: 0;
+    color: white;
+}
+/* --------------------  TABLET - BOOTSTRAP MD ------------------------ */
+@media screen and (min-width: 768px) {
+
+    #footer-wrap {
+        padding: 30px 100px;
+        justify-content: space-around;
+    }
+
+    #footer-logo {
+        order: 1;
+        width: 30%;
+    }
+
+    #footer-logo h2 {
+        width: 50px;
+    }
+
+    #footer-contact {
+        width: 30%;
+        order: 2;
+    }
+
+    #footer-contact h2 {
+        font-size: 30px;
+    }
+
+    #footer-social {
+        width: 30%;
+        justify-content: space-between;
+    }
+}
+

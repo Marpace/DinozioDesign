@@ -1,54 +1,3 @@
-
-// *********************************  NAVBAR SECTION  *******************************
-
-
-const toggler = document.querySelector('#navbar-toggler');
-const div1 = document.querySelector('#toggler-div-1');
-const div2 = document.querySelector('#toggler-div-2');
-const div3 = document.querySelector('#toggler-div-3');
-const smallNav = document.querySelector('#small-nav');
-const navFiller = document.querySelector('#nav-filler');
-const navWrap = document.querySelector('#nav-wrap');
-const navDiv = document.querySelector('#small-nav').children[0];
-
-const animateToggler = function(element){
-    element.style.top = "15px"
-    element.style.width = "70%"
-    element.style.transition = ".1s"
-}
-const animateX = function(element){
-    element.style.top = ""
-    element.style.width = ""
-    element.style.transition = ""
-}
-toggler.addEventListener('click', function(){
-    if(getComputedStyle(div2).opacity === "1"){
-        animateToggler(div1);
-        animateToggler(div3);
-        div2.style.opacity = "0"
-        setTimeout(function(){
-            div1.style.transform = "rotate(45deg)";
-            div3.style.transform = "rotate(-45deg)";
-        }, 100);
-
-        smallNav.style.height = "230px";
-        smallNav.style.padding = " 20px 30px";
-
-    } else {
-        div1.style.transform = "";
-        div3.style.transform = "";
-        
-        setTimeout(() => {
-           animateX(div1);
-           animateX(div3) 
-           div2.style.opacity = "1"
-        }, 100);
-        smallNav.style.height = "0";
-        smallNav.style.padding = "0 30px";
-    }
-})
-
-
 // *********************************  ABOUT SECTION  *******************************
 
 
@@ -63,7 +12,7 @@ const what = document.querySelector('#what')
 
 arrowRight.addEventListener('click', function(){
     arrowRight.children[0].style.color = "grey";
-    arrowLeft.children[0].style.color = '#FE7F24';
+    arrowLeft.children[0].style.color = '#FF9050';
     indicator.style.right = "0";
     who.style.opacity = "0";
     what.style.opacity = "1";
@@ -74,7 +23,7 @@ arrowRight.addEventListener('click', function(){
 
 arrowLeft.addEventListener('click', function(){
     arrowLeft.children[0].style.color = "grey";
-    arrowRight.children[0].style.color = '#FE7F24';
+    arrowRight.children[0].style.color = '#FF9050';
     indicator.style.right = "50%";
     what.style.opacity = "0";
     who.style.opacity = "1";
@@ -234,12 +183,6 @@ const cardObserver = new IntersectionObserver(cardsCallback, cardsOptions);
 
 cardObserver.observe(card);
 
-
-
-
-
-
-
 // *********************************  ACCORDION SECTION  *******************************
 
 
@@ -289,19 +232,7 @@ icons.forEach(icon =>{
     });
 })
 
-
-// ***************************************  FOOTER  *********************************
-
-
-const footerBtn = document.querySelector('#footer-social').children[0];
-
-footerBtn.addEventListener('click', function(){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
-
-
-// SCREEN SIZE 768px OR HIGHER
+// **********************  SCREEN WIDTH >= 768PX  ******************************** 
 
 if(window.screen.width >= 768){
 
@@ -343,33 +274,4 @@ if(window.screen.width >= 768){
         benefitsObserver.observe(group);
     })
 
-    // Navbar animation 
-
-    window.onscroll = function() {scrollNav()};
-
-    function scrollNav() {
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            navFiller.style.height = "50px"
-            smallNav.style.height = "50px"
-            navDiv.style.right = "50%"
-            navDiv.style.marginRight = "-184px" 
-            navDiv.style.top = "6px"
-            navWrap.style.display = "none"
-        } else {
-            setTimeout(() => {
-                navFiller.style.height = "80px"
-                navWrap.style.display = "flex"
-                smallNav.style.justifyContent = "flex-end"
-            }, 200);
-            navDiv.style.right = "100px"
-            navDiv.style.top = "20px"
-            navDiv.style.marginRight = "" 
-            smallNav.style.height = ""
-        }
-    }
-
 }
-
-const currentYear = new Date().getFullYear();
-const year = document.querySelector('#copyright').children[0];
-year.innerHTML = `© ${currentYear}`
