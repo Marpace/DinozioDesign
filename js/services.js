@@ -54,7 +54,7 @@ icons.forEach(icon =>{
 
 const scrollDiv = document.querySelector('#scrollable-div');
 const scrollImg = document.querySelector('#scrollable-div-img');
-const innerImg = document.querySelector('#scroll-img')
+const innerImg = document.querySelector('#inner-img')
 
 const scrollText = document.getElementsByClassName('scroll-item');
 const scrollItems = [...scrollText];
@@ -87,7 +87,7 @@ const callback = (entries, observer) => {
             // border4.style.height = "100px"
          
 
-            scrollImg.children[0].innerHTML = entry.target.attributes.id.value
+            innerImg.children[0].innerHTML = entry.target.attributes.id.value
 
         }
         

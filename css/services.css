@@ -365,12 +365,24 @@ nav {
     }
 
     #scrollable-div::-webkit-scrollbar {
-        display: none;
+        width: 7px;
     }
 
     #scrollable-div {
         -ms-overflow-style: none; 
         scrollbar-width: none;
+    }
+    
+    #scrollable-div::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        box-shadow: inset 0 0 6px rgba(158, 158, 158, 0.3);
+        border-radius: 10px;
+    }
+    
+    #scrollable-div::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(177, 177, 177, 0.5);
+        box-shadow: inset 0 0 6px rgba(177, 177, 177, 0.5); 
     }
   
     .scroll-item {
@@ -383,11 +395,19 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        right: 60px;
+        right: 10px;
         top: 125px;
-        width: 40%;
+        width: 60%;
         height: 250px;
-        border: 1px solid white;
+    }
+
+    #inner-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        text-align: center;
     }
 
     #scrollable-div-img h1 {
@@ -400,41 +420,6 @@ nav {
         color: white;
     }
 
-    /* #scroll-img {
-        height: 200px;
-        width: 300px;
-        position: relative;
-    }
-
-    .border-div {
-        position: absolute;
-        transition: .5s;
-    }
-
-    #line-1 {
-        height: 0;
-        width: 0;
-        background: black;
-    }
-    #line-2 {
-        height: 0;
-        width: 0;
-        background: black;
-    }
-    #line-3 {
-        bottom: 0;
-        
-        height: 0;
-        width: 0;
-        background: black;
-    }
-    #line-4 {
-        bottom: 0;
-        right: 0;
-        height: 0;
-        width: 0;
-        background: black;
-    } */
     
 
 }

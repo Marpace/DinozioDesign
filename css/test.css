@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+
+#wrap {
+    height: 400px;
+    width: 600px;
+    border: 1px solid black;
+    position: relative;
+    transition: .1s;
+}
+
+.line {
+    position: absolute;
+    background: black;
+    transition: 1s;
+}
+
+#line-1 {
+    top: 50px;
+    left: 50px;
+    height: 0;
+    width: 0;
+}
+
+#line-2 {
+    top: 50px;
+    left: 50px;
+    height: 0;
+    width: 0;
+}
+
+#line-3 {
+    left: 50px;
+    bottom: 48px;
+    height: 0;
+    width: 0;
+}
+#line-4 {
+    left: 250px;
+    top: 50px;
+    height: 0;
+    width: 0;
+}
+#line-5 {
+    left: 250px;
+    top: 130px;
+    height: 0;
+    width: 0;
+}
+#line-6 {
+    right: 98px;
+    top: 130px;
+    height: 0;
+    width: 0;
+}
+#line-7 {
+    left: 50px;
+    top: 200px;
+    height: 0;
+    width: 0;
+}
+#line-8 {
+    left: 210px;
+    top: 200px;
+    height: 0;
+    width: 0;
+}
+#line-9 {
+    left: 50px;
+    top: 280px;
+    height: 0;
+    width: 0;
+}
+#line-10 {
+    left: 180px;
+    top: 280px;
+    width: 0;
+    height: 0;
+}
+#line-11 {
+    left: 180px;
+    top: 320px;
+    width: 0;
+    height: 0;
+}
+#line-12 {
+    left: 250px;
+    top: 260px;
+    width: 0;
+    height: 0;
+}
+#line-13 {
+    left: 250px;
+    top: 260px;
+    width: 0;
+    height: 0;
+}
+#line-14 {
+    left: 290px;
+    top: 260px;
+    width: 0;
+    height: 0;
+}
+#line-15 {
+    left: 320px;
+    top: 260px;
+    width: 0;
+    height: 0;
+}
+#line-16 {
+    left: 320px;
+    top: 320px;
+    width: 0;
+    height: 0;
+}
+#line-17 {
+    left: 460px;
+    top: 270px;
+    width: 0;
+    height: 0;
+}
+#line-18 {
+    left: 461px;
+    top: 270px;
+    width: 0;
+    height: 0;
+}
+#line-19 {
+    left: 180px;
+    top: 200px;
+    width: 0;
+    height: 0;
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+}
+#line-20 {
+    left: 180px;
+    top: 290px;
+    width: 0;
+    height: 0;
+    transform: rotate(0deg);
+    transform-origin: top right;
+}
+#line-21 {
+    left: 260px;
+    top: 260px;
+    width: 0;
+    height: 0;
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+}
+
+
+
+
