@@ -13,6 +13,7 @@ h1 {
 
 #nav-filler {
     height: 80px;
+    transition: .3s;
 }
 
 nav {
