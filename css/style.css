@@ -585,7 +585,7 @@ nav {
     #templating-img-div {
         width: 300%;
         height: 550px;
-        background-image: url(../images/templating-WHAT.jpg);
+        background-image: url(../images/templating-What.jpg);
         background-size: cover;
         transition: .7s;
     }
